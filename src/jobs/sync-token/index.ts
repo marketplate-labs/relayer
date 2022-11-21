@@ -61,6 +61,10 @@ if (config.doBackgroundWork) {
             hostname = "testnets-api.opensea.io";
             network = "rinkeby";
             break;
+          case 5:
+            hostname = "testnets-api.opensea.io";
+            network = "goerli";
+            break;
 
           case 137:
             network = "matic";
