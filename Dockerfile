@@ -1,9 +1,13 @@
-FROM node:16.13-slim
-
-ARG DATABASE_URL
+FROM node:gallium-alpine
 
 WORKDIR /relayer
-ADD . /relayer
-RUN yarn install
+
+COPY package.json yarn.lock ./
+
+RUN yarn
+
+ADD . .
+
 RUN yarn build
+
 CMD yarn start
